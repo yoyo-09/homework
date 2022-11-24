@@ -13,14 +13,17 @@
             <img src="" alt="">   
         </div>
         <div class="box5">
+            <script src="./input.js"></script>
             <h1>log-in</h1>
-            <input type="email" placeholder="Username/E-mail"><br>
-            <input type="text" placeholder="Password"><br>
+            <input type="text" placeholder="User/admin" id="name" required="required"><br>
+            <input type="password" placeholder="Password" id="password" required="required"><br>
             <div class="box3">
             <input type="checkbox" id="ren">
             <label for="ren">Remember</label>
             </div>
-            <button class="but1">log in</button>
+            <div class="submitbutton">
+            <input type="submit"onclick="kao()">
+            </div>
         </div> 
         <div>
             <label for="but2">question?</label>

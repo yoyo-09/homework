@@ -30,7 +30,7 @@ background: rgb(198, 253, 255);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;  
 }
-input[type="email"],input[type="text"]{
+input[type="password"],input[type="text"]{
     width: 30vh;
 }
 .box5>h1{
@@ -48,19 +48,45 @@ input[type="email"],input[type="text"]{
 .but1:hover{
     background-color: rgb(0, 245, 24);
 }
-.but2{
-    background-color: rgb(60, 255, 99);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    padding: 4px 10px;
-    border: none;
-    box-shadow: 1px 1px;
-    border-radius: 2px;
-}
-.but2:hover{
-    background-color: rgb(0, 245, 24);
-}
 .box3{
     margin: 5px;
     padding: 0px;
 }
+.submitbutton{
+     width: 200px;
+    size: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submitbutton input{
+    width: 200px;
+    height: 35px;
+    background-color: rgba(65, 125, 215, 0.862);
+    color: white;
+    font-size: 13pt;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 7px;
+    border-color: rgb(35, 35, 73);
+}    
+    
+.submitbutton input:hover{
+    width: 200px;
+    height: 35px;
+    background-color: rgba(38, 102, 198, 0.862);
+    color: white;
+    font-size: 13pt;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 7px;
+    border-color: rgb(26, 26, 219);
+}  
+.admin{  
+    padding: 300px;
+    width: auto;
+    text-align: center;  
+}  
+.user{  
+    padding: 300px;
+    width: auto;
+    text-align: center;  
+}  
