@@ -1,0 +1,73 @@
+
+<html>
+    <head>
+        <title>Homework</title>
+        <style>
+            video{
+                background-color:black;
+            }
+            canss{
+                background-color: black;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div class="streamm">
+         <div>
+            <button id="onbtn" onclick="on()">Open</button>
+            <button id="offbtn" onclick="off()">Close</button>
+            <button id="click">Click Photo</button>
+        </div>
+        <div class="videoo">
+            <video id="video" width="640" height="480" autoplay>
+            </video>
+        </div>
+        <div class="canvass">
+           <canvas id="canss" width="320" height="240"></canvas>
+        </div>
+    
+    </div>
+       
+    <script>
+      var videoEl = document.getElementById("video")
+    
+      function on() {
+          navigator.mediaDevices
+            .getUserMedia({
+              video: true,
+            })
+            .then(function (stream) {
+              videoEl.srcObject = stream
+              videoEl.play()
+            })
+            .then(() => {
+              isPlaying = true;
+            });
+      }
+      function off() {
+        const stream = videoEl.srcObject
+        if (stream) {
+          const tracks = stream.getTracks()
+          tracks.forEach(function (pasues) {
+            pasues.stop()
+          });
+          videoEl.srcObject = null
+        }
+      }
+    
+    let clicks= document.querySelector("#click");
+    let cans = document.querySelector("#canss");
+    
+    clicks.addEventListener('click', function() {
+           cans.getContext('2d')
+           .drawImage(video, 0, 0, cans.width, cans.height);
+           let image_data_url = cans.toDataURL('image/jpeg');
+           console.log(image_data_url);
+    });                                                              
+    
+    
+    </script>
+    
+    </body>
+    </html>
